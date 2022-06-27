@@ -7,29 +7,42 @@
     <title>Etch-a-Sketch</title>
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <h1>Etch-a-Sketch</h1>
-    <div class="container">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-    </div>
+<body class="body">
+    
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center">
+                <h1>Etch-a-Sketch</h1>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="containeri" id="container">
+                  
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4"></div>   
+            <div class="col-md-5">
+                <button type="button" class="Green" value="green">Green</button>
+                <button type="button" class="black" value="black">Black</button>
+                <button type="button" class="color" value="color">Colors</button>
+                <input type="number" class="size" id="sizebtn" onchange="grid()">
+                <button type="button" onclick="reset()">Reset</button>
+            </div>
+            <div class="col-md-3"> </div>  
+        </div>
+    
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
