@@ -1,58 +1,66 @@
+const container = document.querySelector('.container')
+const blackbtn = document.querySelector('.black');
+const color = document.querySelector('.color');
+const rgbbtn = document.querySelector('.rgb');
+const sizeNum = document.querySelector('.size');
+const size = sizeNum.value;
+const erase = document.querySelector('.erase');
+const resetbtn = document.querySelector('.reset');
 
-// const greenbtn = document.getElementsByClassName('.green');
-// const blackbtn = document.getElementsByClassName('.black');
-// const color = document.getElementsByClassName('.color');
-// const size = document.getElementsByClassName('.size');
-// const resetbtn = document.getElementsByClassName('.reset');
+// create div using function
 
+function createPixel(size){
+    container.style.setProperty('--size', size);
+    for (let i = 0; i < (size * size); i++){
+        const div = document.createElement('div');
+        div.style.backgroundColor = "#8080800f";
+        div.classList.add('pixel');
 
-const container_grid = document.querySelector('.container_grid');
-// const size = document.getElementsByClassName('.size');
+     
+        blackbtn.addEventListener('click', () =>{
+            div.addEventListener('mouseover', function(){
+                div.style.background = "black";
+            })
+            container.appendChild(div)
+        })
+    
+    
+        // rgbbtn.addEventListener('click', () =>{
+        //     div.addEventListener('mouseover', function(){
+        //         div.style.background = "black";
+        //     })
+        //     container.appendChild(div)
+        // })
+        // color.addEventListener('click', () =>{
+        //     div.addEventListener('mouseover', function(){
+        //         div.style.background = "black";
+        //     })
+        //     container.appendChild(div)
+        // })
 
-// function createPixel(){
-//     // const div = decument.createElement('div');
-//     div = setAttribute("id","pixels");
-//     div.classList.add("pixel");
-//     div.appandChild("div");
-//     for (i = 0; i < size * size; i++) {
-//         pixelsqr = document.createElement('div');
-//         pixelsqr.classList.add("pixelsqr");
-//         div.appendChild(pixelsqr);
-//     }
-//     container_grid.innerHTML="";
-//     container_grid.appendChild(div);
-// }
- /* Creating the grid */
-/* Creating the grid */
-function grid(el) {
-    var container = document.createElement("div");
-    container.id = "main";
-    container.className = "container";
-
-    for (i=0; i<16; i+=1) {
-        var row = document.createElement("div");
-        row.className = "row";
-        row.id = "row" + i;
-      
-        for (k=0; k<16; k+=1) {
-            var box = document.createElement("div"); 
-            box.className = "box";
-            row.appendChild(box);
-        };
-      
-        container.appendChild(row);      
-    };
-  
-    el.appendChild(container);
-};
-
-grid(document.body);
+        // div.addEventListener('mouseover', function(){
+        //     div.style.backgroundColor = color.value;
+        
+        // })
 
 
+        container.appendChild(div)
+        
+    }
+}
+createPixel(size);
 
+function firstbutton(){
+    blackbtn.addEventListener('click', () =>{
+        div.addEventListener('mouseover', function(){
+            div.style.background = "black";
+        })
+        container.appendChild(div)
+    })
+}
 
-
-
+ 
+firstbutton()
 
 
 
