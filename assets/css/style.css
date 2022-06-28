@@ -10,11 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-.row {
-    --bs-gutter-x: 0.5rem;
-    --bs-gutter-y: 0;
 }
 h1{
     color:#9eb23b;
@@ -56,7 +51,4 @@ input{
     border: 4px solid #9eb23b;  
     border-radius: 25px;
     text-align: center;
-}
-.color{
-    border-radius: 25px;
 }
